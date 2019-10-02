@@ -70,7 +70,7 @@ case object FrogRace {
         }
       }
 
-      Thread.sleep(1000)
+      Thread.sleep(500)
     } }
 
 

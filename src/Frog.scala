@@ -1,5 +1,5 @@
 
-case class Frog(name:String, strength:Float){
+case class Frog(name:String, strength:Float, quickness: Float){
 
   val K = 10
   val rnd = new scala.util.Random()
@@ -13,7 +13,8 @@ case class Frog(name:String, strength:Float){
   def doRace(raceDistance: Int): Unit ={
     while(distance<raceDistance){
       jump()
-      Thread.sleep(1000)
+      val delay = (1250 * (1-rnd.between(0,quickness))).toInt
+      Thread.sleep(delay)
     }
   }
 
